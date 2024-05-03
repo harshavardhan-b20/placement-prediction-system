@@ -27,3 +27,4 @@ torch==2.0.1
 torchvision==0.15.2
 urllib3==2.0.5
 Werkzeug==2.3.7
+tensorfow==2.16.1
