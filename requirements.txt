@@ -82,7 +82,6 @@ grpcio==1.60.1
 gunicorn==21.2.0
 h11==0.14.0
 h5py==3.10.0
-haystack-ai @ git+https://github.com/deepset-ai/haystack.git@3fcb4561ebf103c24362eec85d5a6337aaf7db79
 haystack-bm25==1.0.2
 hf_transfer==0.1.6
 html2image==2.0.4.3
@@ -156,7 +155,6 @@ orjson==3.10.0
 packaging==23.1
 pandas==2.2.1
 parso==0.8.3
-pdftotext @ file:///D:/bld/pdftotext_1670852244392/work
 peft==0.10.0
 Pillow==10.0.0
 platformdirs==4.1.0
