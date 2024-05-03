@@ -21,7 +21,7 @@
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            max-width: 600px;
+            max-width: 900px;
             margin: 50px auto;
             overflow: hidden;
             animation: fadeIn 0.8s ease-out;
@@ -32,6 +32,7 @@
                 opacity: 0;
                 transform: translateY(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -45,18 +46,27 @@
             font-size: 28px;
         }
 
-        .form-group {
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             margin-bottom: 20px;
         }
 
-        label {
+        .form-group {
+            width: calc(33% - 10px); /* Adjusted width */
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
             display: block;
             margin-bottom: 5px;
             font-weight: bold;
         }
 
-        input[type="text"], select {
-            width: calc(100% - 22px);
+        .form-group input[type="text"],
+        .form-group select {
+            width: 90%;
             padding: 10px;
             border: none;
             border-radius: 5px;
@@ -64,7 +74,7 @@
             color: #333;
         }
 
-        select {
+        .form-group select {
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -110,8 +120,8 @@
             <div class="form-group">
                 <label for="ssc_b">Secondary School Board:</label>
                 <select id="ssc_b" name="ssc_b" required>
-                    <option value="0">Central</option>
-                    <option value="1">Others</option>
+                    <option value="1">Central</option>
+                    <option value="0">Others</option>
                 </select>
             </div>
             <div class="form-group">
@@ -121,16 +131,16 @@
             <div class="form-group">
                 <label for="hsc_b">High School Board:</label>
                 <select id="hsc_b" name="hsc_b" required>
-                    <option value="0">Central</option>
-                    <option value="1">Others</option>
+                    <option value="1">Central</option>
+                    <option value="0">Others</option>
                 </select>
             </div>
             <div class="form-group">
                 <label for="hsc_s">High School Stream:</label>
                 <select id="hsc_s" name="hsc_s" required>
-                    <option value="1">Commerce</option>
-                    <option value="2">Science</option>
-                    <option value="0">Arts</option>
+                    <option value="Commerce">Commerce</option>
+                    <option value="Science">Science</option>
+                    <option value="Arts">Arts</option>
                 </select>
             </div>
             <div class="form-group">
@@ -140,9 +150,9 @@
             <div class="form-group">
                 <label for="degree_t">Degree Stream:</label>
                 <select id="degree_t" name="degree_t" required>
-                    <option value="2">Sci&Tech</option>
-                    <option value="0">Comm&Mgmt</option>
-                    <option value="1">Others</option>
+                    <option value="Sci&Tech">Sci&Tech</option>
+                    <option value="Comm&Mgmt">Comm&Mgmt</option>
+                    <option value="Others">Others</option>
                 </select>
             </div>
             <div class="form-group">
@@ -159,15 +169,21 @@
             <div class="form-group">
                 <label for="specialisation">Specialisation:</label>
                 <select id="specialisation" name="specialisation" required>
-                    <option value="0">Mkt&Fin</option>
-                    <option value="1">Mkt&HR</option>
+                    <option value="1">Mkt&Fin</option>
+                    <option value="0">Mkt&HR</option>
                 </select>
             </div>            
             <div class="form-group">
                 <label for="mba_p">MBA Score:</label>
                 <input type="text" id="mba_p" name="mba_p" required>
             </div>
-
+            <div class="form-group">
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="1">Placed</option>
+                    <option value="0">Not Placed</option>
+                </select>
+            </div>
             <input type="submit" class="submit-button" value="Submit">
         </form>
     </div>
