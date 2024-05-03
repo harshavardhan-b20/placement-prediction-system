@@ -40,10 +40,9 @@ def submit():
 
         scaled = scaler.transform(np.array([gender,ssc_p,ssc_b_Central,hsc_p,hsc_b_Central,hsc_s,degree_p,degree_t,workex,etest_p,specialisation,mba_p]).reshape(1, -1))
         
-        prediction = model.predict(scaled)
+        prediction = (model.predict(scaled) * 100).round(2)[0][0]
         if prediction < 0:
             prediction = 0
     return render_template('prediction.html',result=prediction)
 
-if __name__=='__main__':
-    app.run(host='0.0.0.0',port=8080)
+
