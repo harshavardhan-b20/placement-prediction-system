@@ -1,5 +1,5 @@
 Flask==2.0.2
-tensorflow==2.7.0
+tensorflow
 numpy==1.21.5
 Werkzeug==3.0.1
 python-dotenv==1.0.1
